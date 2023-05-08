@@ -3,10 +3,13 @@ package ru.netology.rest;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+
 
 class MobileBankApiTestV6 {
     private RequestSpecification requestSpec = new RequestSpecBuilder()
@@ -30,5 +33,9 @@ class MobileBankApiTestV6 {
       // Проверки
       .then()
           .statusCode(200);
+
     }
+
+
+
 }
