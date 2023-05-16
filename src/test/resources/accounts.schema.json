@@ -34,7 +34,7 @@
           "RUB",
           "USD"
         ],
-        "pattern": "^USD|RUB$"
+        "pattern": "^USD|RUR$"
       }
     }
   }
