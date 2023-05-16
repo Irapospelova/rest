@@ -30,15 +30,17 @@
       },
       "currency": {
         "type": "string",
-        "patternProperties": {
-          "^RUB$": {
-            "type": "string"
-          },
-          "^USD$": {
-            "type": "string"
-          }
-        }
+        "enum": [
+          "RUB",
+          "USD"
+        ],
+        "pattern": "^USD|RUB$"
       }
     }
   }
 }
+
+
+
+
+
